@@ -1,0 +1,501 @@
+[
+{"question": "What is the largest desert in the world?", "options": ["Antarctic","Sahara","Gobi","Kalahari"], "answer": "Antarctic", "category": "Geography", "points": 1000},
+{"question": "Which element has atomic number 79?", "options": ["Gold","Mercury","Copper","Silver"], "answer": "Gold", "category": "Science", "points": 1000},
+{"question": "Who wrote 'The Catcher in the Rye'?", "options": ["J.D. Salinger","George Orwell","Ernest Hemingway","F. Scott Fitzgerald"], "answer": "J.D. Salinger", "category": "Literature", "points": 1000},
+{"question": "In Greek mythology, who is the god of the underworld?", "options": ["Hades","Zeus","Poseidon","Ares"], "answer": "Hades", "category": "Mythology", "points": 1000},
+{"question": "What is the capital of Iceland?", "options": ["Reykjavík","Helsinki","Oslo","Stockholm"], "answer": "Reykjavík", "category": "Geography", "points": 1000},
+{"question": "Which planet is known as the Red Planet?", "options": ["Mars","Jupiter","Saturn","Venus"], "answer": "Mars", "category": "Science", "points": 1000},
+{"question": "Who painted 'The Persistence of Memory'?", "options": ["Salvador Dalí","Pablo Picasso","Claude Monet","Vincent van Gogh"], "answer": "Salvador Dalí", "category": "Art", "points": 1000},
+{"question": "Which novel features the character Atticus Finch?", "options": ["To Kill a Mockingbird","1984","Brave New World","The Great Gatsby"], "answer": "To Kill a Mockingbird", "category": "Literature", "points": 1000},
+{"question": "What year did the Berlin Wall fall?", "options": ["1989","1991","1987","1990"], "answer": "1989", "category": "History", "points": 1000},
+{"question": "What is the smallest prime number?", "options": ["2","1","3","5"], "answer": "2", "category": "Math", "points": 1000},
+{"question": "What is the powerhouse of the cell?", "options": ["Mitochondrion","Nucleus","Ribosome","Golgi apparatus"], "answer": "Mitochondrion", "category": "Science", "points": 1000},
+{"question": "Who is the author of 'Pride and Prejudice'?", "options": ["Jane Austen","Charlotte Brontë","Mary Shelley","Emily Dickinson"], "answer": "Jane Austen", "category": "Literature", "points": 1000},
+{"question": "Which country won the FIFA World Cup in 2018?", "options": ["France","Croatia","Brazil","Germany"], "answer": "France", "category": "Sports", "points": 1000},
+{"question": "What is the chemical formula for table salt?", "options": ["NaCl","KCl","CaCl2","MgCl2"], "answer": "NaCl", "category": "Science", "points": 1000},
+{"question": "Who composed the Four Seasons?", "options": ["Antonio Vivaldi","Johann Bach","Wolfgang Mozart","Ludwig Beethoven"], "answer": "Antonio Vivaldi", "category": "Music", "points": 1000},
+{"question": "What is the longest established university in the world?", "options": ["University of Bologna","University of Oxford","University of Paris","University of Salamanca"], "answer": "University of Bologna", "category": "Education", "points": 1000},
+{"question": "Which film won the Academy Award for Best Picture in 1994?", "options": ["Forrest Gump","Pulp Fiction","Shawshank Redemption","The Lion King"], "answer": "Forrest Gump", "category": "Movies", "points": 1000},
+{"question": "What currency is used in Switzerland?", "options": ["Swiss franc","Euro","US dollar","Pound sterling"], "answer": "Swiss franc", "category": "Economics", "points": 1000},
+{"question": "Which programming language is known for its snake logo?", "options": ["Python","Ruby","Perl","Java"], "answer": "Python", "category": "Technology", "points": 1000},
+{"question": "In which city is the Louvre Museum located?", "options": ["Paris","Rome","London","Madrid"], "answer": "Paris", "category": "Art", "points": 1000},
+{"question": "Who was the first female Prime Minister of the United Kingdom?", "options": ["Margaret Thatcher","Theresa May","Angela Merkel","Indira Gandhi"], "answer": "Margaret Thatcher", "category": "History", "points": 1000},
+{"question": "What is the term for animals that eat both plants and meat?", "options": ["Omnivores","Herbivores","Carnivores","Detritivores"], "answer": "Omnivores", "category": "Science", "points": 1000},
+{"question": "Which country is the largest by land area?", "options": ["Russia","Canada","China","United States"], "answer": "Russia", "category": "Geography", "points": 1000},
+{"question": "What element does 'O' represent on the periodic table?", "options": ["Oxygen","Osmium","Oganesson","Gold"], "answer": "Oxygen", "category": "Science", "points": 1000},
+{"question": "Who directed the movie 'Inception'?", "options": ["Christopher Nolan","Steven Spielberg","James Cameron","Quentin Tarantino"], "answer": "Christopher Nolan", "category": "Movies", "points": 1000},
+{"question": "What is the capital city of Australia?", "options": ["Canberra","Sydney","Melbourne","Brisbane"], "answer": "Canberra", "category": "Geography", "points": 1000},
+{"question": "Which novel begins with 'It was the best of times, it was the worst of times'?", "options": ["A Tale of Two Cities","Great Expectations","Oliver Twist","Bleak House"], "answer": "A Tale of Two Cities", "category": "Literature", "points": 1000},
+{"question": "What gas do plants absorb from the atmosphere?", "options": ["Carbon dioxide","Oxygen","Nitrogen","Helium"], "answer": "Carbon dioxide", "category": "Science", "points": 1000},
+{"question": "Which Shakespeare play features the characters Rosencrantz and Guildenstern?", "options": ["Hamlet","Macbeth","Othello","King Lear"], "answer": "Hamlet", "category": "Literature", "points": 1000},
+{"question": "What is the freezing point of water on the Celsius scale?", "options": ["0°C","32°F","-1°C","100°C"], "answer": "0°C", "category": "Science", "points": 1000},
+{"question": "Who invented the telephone?", "options": ["Alexander Graham Bell","Guglielmo Marconi","Thomas Edison","Nikola Tesla"], "answer": "Alexander Graham Bell", "category": "Technology", "points": 1000},
+{"question": "Which sea creature has three hearts?", "options": ["Octopus","Shark","Dolphin","Whale"], "answer": "Octopus", "category": "Science", "points": 1000},
+{"question": "In Greek mythology, who is the king of the gods?", "options": ["Zeus","Hades","Poseidon","Apollo"], "answer": "Zeus", "category": "Mythology", "points": 1000},
+{"question": "What is the rarest blood type?", "options": ["AB-","O+","A+","B+"], "answer": "AB-", "category": "Science", "points": 1000},
+{"question": "Which war ended with the Treaty of Versailles?", "options": ["World War I","World War II","American Civil War","War of 1812"], "answer": "World War I", "category": "History", "points": 1000},
+{"question": "What device measures atmospheric pressure?", "options": ["Barometer","Thermometer","Hygrometer","Anemometer"], "answer": "Barometer", "category": "Science", "points": 1000},
+{"question": "Who wrote the play 'Death of a Salesman'?", "options": ["Arthur Miller","Tennessee Williams","Eugene O'Neill","Harold Pinter"], "answer": "Arthur Miller", "category": "Literature", "points": 1000},
+{"question": "What is the chemical symbol for potassium?", "options": ["K","P","Pt","Pu"], "answer": "K", "category": "Science", "points": 1000},
+{"question": "Which city hosted the 2008 Summer Olympics?", "options": ["Beijing","Athens","Sydney","London"], "answer": "Beijing", "category": "Sports", "points": 1000},
+{"question": "Who is known as the 'Father of Computers'?", "options": ["Charles Babbage","Alan Turing","John von Neumann","Steve Jobs"], "answer": "Charles Babbage", "category": "Technology", "points": 1000},
+{"question": "Which organ in the human body produces insulin?", "options": ["Pancreas","Liver","Kidneys","Gallbladder"], "answer": "Pancreas", "category": "Science", "points": 1000},
+{"question": "What element has the highest atomic number naturally occurring?", "options": ["Uranium","Plutonium","Thorium","Lead"], "answer": "Uranium", "category": "Science", "points": 1000},
+{"question": "In which continent is the Sahara Desert?", "options": ["Africa","Asia","Australia","South America"], "answer": "Africa", "category": "Geography", "points": 1000},
+{"question": "Who wrote 'The Iliad' and 'The Odyssey'?", "options": ["Homer","Virgil","Ovid","Sophocles"], "answer": "Homer", "category": "Literature", "points": 1000},
+{"question": "What is the study of the motion of air called?", "options": ["Aerodynamics","Thermodynamics","Hydrodynamics","Astrodynamics"], "answer": "Aerodynamics", "category": "Science", "points": 1000},
+{"question": "Which artist painted the ceiling of the Sistine Chapel?", "options": ["Michelangelo","Raphael","Leonardo da Vinci","Donatello"], "answer": "Michelangelo", "category": "Art", "points": 1000},
+{"question": "What is the capital of South Korea?", "options": ["Seoul","Busan","Incheon","Daegu"], "answer": "Seoul", "category": "Geography", "points": 1000},
+{"question": "Which vitamin is produced when skin is exposed to sunlight?", "options": ["Vitamin D","Vitamin C","Vitamin A","Vitamin K"], "answer": "Vitamin D", "category": "Science", "points": 1000},
+{"question": "Who developed the theory of relativity?", "options": ["Albert Einstein","Isaac Newton","Niels Bohr","Galileo Galilei"], "answer": "Albert Einstein", "category": "Science", "points": 1000},
+{"question": "What is the hardest natural mineral?", "options": ["Diamond","Quartz","Topaz","Corundum"], "answer": "Diamond", "category": "Geology", "points": 1000},
+{"question": "What is the largest desert in the world?", "options": ["Antarctic","Sahara","Gobi","Kalahari"], "answer": "Antarctic", "category": "Geography", "points": 1000},
+  {"question": "Which element has atomic number 79?", "options": ["Gold","Mercury","Copper","Silver"], "answer": "Gold", "category": "Science", "points": 1000},
+  {"question": "Who wrote 'The Catcher in the Rye'?", "options": ["J.D. Salinger","George Orwell","Ernest Hemingway","F. Scott Fitzgerald"], "answer": "J.D. Salinger", "category": "Literature", "points": 1000},
+  {"question": "In Greek mythology, who is the god of the underworld?", "options": ["Hades","Zeus","Poseidon","Ares"], "answer": "Hades", "category": "Mythology", "points": 1000},
+  {"question": "What is the capital of Iceland?", "options": ["Reykjavík","Helsinki","Oslo","Stockholm"], "answer": "Reykjavík", "category": "Geography", "points": 1000},
+  {"question": "Which planet is known as the Red Planet?", "options": ["Mars","Jupiter","Saturn","Venus"], "answer": "Mars", "category": "Science", "points": 1000},
+  {"question": "Who painted 'The Persistence of Memory'?", "options": ["Salvador Dalí","Pablo Picasso","Claude Monet","Vincent van Gogh"], "answer": "Salvador Dalí", "category": "Art", "points": 1000},
+  {"question": "Which novel features the character Atticus Finch?", "options": ["To Kill a Mockingbird","1984","Brave New World","The Great Gatsby"], "answer": "To Kill a Mockingbird", "category": "Literature", "points": 1000},
+  {"question": "What year did the Berlin Wall fall?", "options": ["1989","1991","1987","1990"], "answer": "1989", "category": "History", "points": 1000},
+  {"question": "What is the smallest prime number?", "options": ["2","1","3","5"], "answer": "2", "category": "Math", "points": 1000},
+  {"question": "What is the powerhouse of the cell?", "options": ["Mitochondrion","Nucleus","Ribosome","Golgi apparatus"], "answer": "Mitochondrion", "category": "Science", "points": 1000},
+  {"question": "Who is the author of 'Pride and Prejudice'?", "options": ["Jane Austen","Charlotte Brontë","Mary Shelley","Emily Dickinson"], "answer": "Jane Austen", "category": "Literature", "points": 1000},
+  {"question": "Which country won the FIFA World Cup in 2018?", "options": ["France","Croatia","Brazil","Germany"], "answer": "France", "category": "Sports", "points": 1000},
+  {"question": "What is the chemical formula for table salt?", "options": ["NaCl","KCl","CaCl2","MgCl2"], "answer": "NaCl", "category": "Science", "points": 1000},
+  {"question": "Who composed the Four Seasons?", "options": ["Antonio Vivaldi","Johann Bach","Wolfgang Mozart","Ludwig Beethoven"], "answer": "Antonio Vivaldi", "category": "Music", "points": 1000},
+  {"question": "What is the longest established university in the world?", "options": ["University of Bologna","University of Oxford","University of Paris","University of Salamanca"], "answer": "University of Bologna", "category": "Education", "points": 1000},
+  {"question": "Which film won the Academy Award for Best Picture in 1994?", "options": ["Forrest Gump","Pulp Fiction","Shawshank Redemption","The Lion King"], "answer": "Forrest Gump", "category": "Movies", "points": 1000},
+  {"question": "What currency is used in Switzerland?", "options": ["Swiss franc","Euro","US dollar","Pound sterling"], "answer": "Swiss franc", "category": "Economics", "points": 1000},
+  {"question": "Which programming language is known for its snake logo?", "options": ["Python","Ruby","Perl","Java"], "answer": "Python", "category": "Technology", "points": 1000},
+  {"question": "In which city is the Louvre Museum located?", "options": ["Paris","Rome","London","Madrid"], "answer": "Paris", "category": "Art", "points": 1000},
+  {"question": "Who was the first female Prime Minister of the United Kingdom?", "options": ["Margaret Thatcher","Theresa May","Angela Merkel","Indira Gandhi"], "answer": "Margaret Thatcher", "category": "History", "points": 1000},
+  {"question": "What is the term for animals that eat both plants and meat?", "options": ["Omnivores","Herbivores","Carnivores","Detritivores"], "answer": "Omnivores", "category": "Science", "points": 1000},
+  {"question": "Which country is the largest by land area?", "options": ["Russia","Canada","China","United States"], "answer": "Russia", "category": "Geography", "points": 1000},
+  {"question": "What element does 'O' represent on the periodic table?", "options": ["Oxygen","Osmium","Oganesson","Gold"], "answer": "Oxygen", "category": "Science", "points": 1000},
+  {"question": "Who directed the movie 'Inception'?", "options": ["Christopher Nolan","Steven Spielberg","James Cameron","Quentin Tarantino"], "answer": "Christopher Nolan", "category": "Movies", "points": 1000},
+  {"question": "What is the capital city of Australia?", "options": ["Canberra","Sydney","Melbourne","Brisbane"], "answer": "Canberra", "category": "Geography", "points": 1000},
+  {"question": "Which novel begins with 'It was the best of times, it was the worst of times'?", "options": ["A Tale of Two Cities","Great Expectations","Oliver Twist","Bleak House"], "answer": "A Tale of Two Cities", "category": "Literature", "points": 1000},
+  {"question": "What gas do plants absorb from the atmosphere?", "options": ["Carbon dioxide","Oxygen","Nitrogen","Helium"], "answer": "Carbon dioxide", "category": "Science", "points": 1000},
+  {"question": "Which Shakespeare play features the characters Rosencrantz and Guildenstern?", "options": ["Hamlet","Macbeth","Othello","King Lear"], "answer": "Hamlet", "category": "Literature", "points": 1000},
+  {"question": "What is the freezing point of water on the Celsius scale?", "options": ["0°C","32°F","-1°C","100°C"], "answer": "0°C", "category": "Science", "points": 1000},
+  {"question": "Who invented the telephone?", "options": ["Alexander Graham Bell","Guglielmo Marconi","Thomas Edison","Nikola Tesla"], "answer": "Alexander Graham Bell", "category": "Technology", "points": 1000},
+  {"question": "Which sea creature has three hearts?", "options": ["Octopus","Shark","Dolphin","Whale"], "answer": "Octopus", "category": "Science", "points": 1000},
+  {"question": "In Greek mythology, who is the king of the gods?", "options": ["Zeus","Hades","Poseidon","Apollo"], "answer": "Zeus", "category": "Mythology", "points": 1000},
+  {"question": "What is the rarest blood type?", "options": ["AB-","O+","A+","B+"], "answer": "AB-", "category": "Science", "points": 1000},
+  {"question": "Which war ended with the Treaty of Versailles?", "options": ["World War I","World War II","American Civil War","War of 1812"], "answer": "World War I", "category": "History", "points": 1000},
+  {"question": "What device measures atmospheric pressure?", "options": ["Barometer","Thermometer","Hygrometer","Anemometer"], "answer": "Barometer", "category": "Science", "points": 1000},
+  {"question": "Who wrote the play 'Death of a Salesman'?", "options": ["Arthur Miller","Tennessee Williams","Eugene O'Neill","Harold Pinter"], "answer": "Arthur Miller", "category": "Literature", "points": 1000},
+  {"question": "What is the chemical symbol for potassium?", "options": ["K","P","Pt","Pu"], "answer": "K", "category": "Science", "points": 1000},
+  {"question": "Which city hosted the 2008 Summer Olympics?", "options": ["Beijing","Athens","Sydney","London"], "answer": "Beijing", "category": "Sports", "points": 1000},
+  {"question": "Who is known as the 'Father of Computers'?", "options": ["Charles Babbage","Alan Turing","John von Neumann","Steve Jobs"], "answer": "Charles Babbage", "category": "Technology", "points": 1000},
+  {"question": "Which organ in the human body produces insulin?", "options": ["Pancreas","Liver","Kidneys","Gallbladder"], "answer": "Pancreas", "category": "Science", "points": 1000},
+  {"question": "What element has the highest atomic number naturally occurring?", "options": ["Uranium","Plutonium","Thorium","Lead"], "answer": "Uranium", "category": "Science", "points": 1000},
+  {"question": "In which continent is the Sahara Desert?", "options": ["Africa","Asia","Australia","South America"], "answer": "Africa", "category": "Geography", "points": 1000},
+  {"question": "Who wrote 'The Iliad' and 'The Odyssey'?", "options": ["Homer","Virgil","Ovid","Sophocles"], "answer": "Homer", "category": "Literature", "points": 1000},
+  {"question": "What is the study of the motion of air called?", "options": ["Aerodynamics","Thermodynamics","Hydrodynamics","Astrodynamics"], "answer": "Aerodynamics", "category": "Science", "points": 1000},
+  {"question": "Which artist painted the ceiling of the Sistine Chapel?", "options": ["Michelangelo","Raphael","Leonardo da Vinci","Donatello"], "answer": "Michelangelo", "category": "Art", "points": 1000},
+  {"question": "What is the capital of South Korea?", "options": ["Seoul","Busan","Incheon","Daegu"], "answer": "Seoul", "category": "Geography", "points": 1000},
+  {"question": "Which vitamin is produced when skin is exposed to sunlight?", "options": ["Vitamin D","Vitamin C","Vitamin A","Vitamin K"], "answer": "Vitamin D", "category": "Science", "points": 1000},
+  {"question": "Who developed the theory of relativity?", "options": ["Albert Einstein","Isaac Newton","Niels Bohr","Galileo Galilei"], "answer": "Albert Einstein", "category": "Science", "points": 1000},
+{
+    "question": "What is the second most abundant gas in Earth's atmosphere?",
+    "options": ["Nitrogen", "Oxygen", "Argon", "Carbon Dioxide"],
+    "answer": "Argon",
+    "category": "Science",
+    "points": 1000
+  },
+  {
+    "question": "Who was the first emperor of Rome?",
+    "options": ["Augustus", "Julius Caesar", "Nero", "Tiberius"],
+    "answer": "Augustus",
+    "category": "History",
+    "points": 1000
+  },
+  {
+    "question": "Who wrote Wuthering Heights?",
+    "options": ["Emily Brontë", "Charlotte Brontë", "Jane Austen", "Mary Shelley"],
+    "answer": "Emily Brontë",
+    "category": "Literature",
+    "points": 1000
+  },
+  {
+    "question": "What is the chemical symbol for tungsten?",
+    "options": ["W", "Tu", "Tg", "T"],
+    "answer": "W",
+    "category": "Science",
+    "points": 1000
+  },
+  {
+    "question": "Which composer wrote the opera 'The Magic Flute'?",
+    "options": ["Wolfgang Mozart", "Ludwig Beethoven", "Franz Schubert", "Johann Strauss"],
+    "answer": "Wolfgang Mozart",
+    "category": "Music",
+    "points": 1000
+  },
+  {
+    "question": "What is the largest moon of Saturn?",
+    "options": ["Titan", "Europa", "Ganymede", "Callisto"],
+    "answer": "Titan",
+    "category": "Astronomy",
+    "points": 1000
+  },
+  {
+    "question": "Who is considered the father of psychoanalysis?",
+    "options": ["Sigmund Freud", "Carl Jung", "Alfred Adler", "Ivan Pavlov"],
+    "answer": "Sigmund Freud",
+    "category": "Psychology",
+    "points": 1000
+  },
+  {
+    "question": "Which element is a liquid at room temperature besides mercury?",
+    "options": ["Bromine", "Chlorine", "Fluorine", "Iodine"],
+    "answer": "Bromine",
+    "category": "Science",
+    "points": 1000
+  },
+  {
+    "question": "What is the capital of Botswana?",
+    "options": ["Gaborone", "Harare", "Lusaka", "Lilongwe"],
+    "answer": "Gaborone",
+    "category": "Geography",
+    "points": 1000
+  },
+  {
+    "question": "In computing, what does 'GIF' stand for?",
+    "options": ["Graphics Interchange Format", "Graphic Interface Format", "General Internet Format", "Graphics Internet Form"],
+    "answer": "Graphics Interchange Format",
+    "category": "Technology",
+    "points": 1000
+  },
+  {
+    "question": "Which painter is famous for his water lilies series?",
+    "options": ["Claude Monet", "Pierre Renoir", "Edouard Manet", "Edgar Degas"],
+    "answer": "Claude Monet",
+    "category": "Art",
+    "points": 1000
+  },
+  {
+    "question": "Which Shakespeare play is set in the city of Verona?",
+    "options": ["Romeo and Juliet", "Hamlet", "Macbeth", "Othello"],
+    "answer": "Romeo and Juliet",
+    "category": "Literature",
+    "points": 1000
+  },
+  {
+    "question": "Who discovered gravity by observing a falling apple?",
+    "options": ["Isaac Newton", "Galileo Galilei", "Johannes Kepler", "Albert Einstein"],
+    "answer": "Isaac Newton",
+    "category": "Science",
+    "points": 1000
+  },
+  {
+    "question": "What is the rarest naturally occurring element on Earth?",
+    "options": ["Astatine", "Francium", "Technetium", "Promethium"],
+    "answer": "Astatine",
+    "category": "Science",
+    "points": 1000
+  },
+  {
+    "question": "Which programming paradigm emphasizes objects and classes?",
+    "options": ["Object-oriented", "Functional", "Procedural", "Logic"],
+    "answer": "Object-oriented",
+    "category": "Technology",
+    "points": 1000
+  },
+  {
+    "question": "What ocean surrounds the Maldives?",
+    "options": ["Indian Ocean", "Pacific Ocean", "Atlantic Ocean", "Arctic Ocean"],
+    "answer": "Indian Ocean",
+    "category": "Geography",
+    "points": 1000
+  },
+  {
+    "question": "Who wrote the play 'Waiting for Godot'?",
+    "options": ["Samuel Beckett", "Jean-Paul Sartre", "Albert Camus", "Eugene Ionesco"],
+    "answer": "Samuel Beckett",
+    "category": "Literature",
+    "points": 1000
+  },
+  {
+    "question": "What is the most populous city in Australia?",
+    "options": ["Sydney", "Melbourne", "Brisbane", "Perth"],
+    "answer": "Sydney",
+    "category": "Geography",
+    "points": 1000
+  },
+  {
+    "question": "Which star is the closest to Earth after the Sun?",
+    "options": ["Proxima Centauri", "Alpha Centauri A", "Barnard's Star", "Sirius"],
+    "answer": "Proxima Centauri",
+    "category": "Astronomy",
+    "points": 1000
+  },
+  {
+    "question": "In Greek mythology, who is the goddess of wisdom?",
+    "options": ["Athena", "Hera", "Demeter", "Artemis"],
+    "answer": "Athena",
+    "category": "Mythology",
+    "points": 1000
+  },
+  {
+    "question": "Which language is primarily spoken in Brazil?",
+    "options": ["Portuguese", "Spanish", "English", "French"],
+    "answer": "Portuguese",
+    "category": "Language",
+    "points": 1000
+  },
+  {
+    "question": "What is the name of Sherlock Holmes’s assistant?",
+    "options": ["Dr. John Watson", "Inspector Lestrade", "Mrs. Hudson", "Mycroft Holmes"],
+    "answer": "Dr. John Watson",
+    "category": "Literature",
+    "points": 1000
+  },
+  {
+    "question": "Which metal has the highest melting point?",
+    "options": ["Tungsten", "Iron", "Titanium", "Gold"],
+    "answer": "Tungsten",
+    "category": "Science",
+    "points": 1000
+  },
+  {
+    "question": "Which country is known as the Land of the Rising Sun?",
+    "options": ["Japan", "China", "South Korea", "Thailand"],
+    "answer": "Japan",
+    "category": "Geography",
+    "points": 1000
+  },
+  {
+    "question": "What is the study of the universe called?",
+    "options": ["Cosmology", "Astrology", "Ontology", "Biology"],
+    "answer": "Cosmology",
+    "category": "Science",
+    "points": 1000
+  },
+  {
+    "question": "Who composed the hymn 'Ave Maria'?",
+    "options": ["Franz Schubert", "Johann Bach", "Wolfgang Mozart", "Antonio Vivaldi"],
+    "answer": "Franz Schubert",
+    "category": "Music",
+    "points": 1000
+  },
+  {
+    "question": "Which U.S. state is the Grand Canyon located in?",
+    "options": ["Arizona", "Nevada", "Utah", "Colorado"],
+    "answer": "Arizona",
+    "category": "Geography",
+    "points": 1000
+  },
+  {
+    "question": "What device is used to measure electric current?",
+    "options": ["Ammeter", "Voltmeter", "Ohmmeter", "Wattmeter"],
+    "answer": "Ammeter",
+    "category": "Science",
+    "points": 1000
+  },
+  {
+    "question": "Who is the author of 'The Hobbit'?",
+    "options": ["J.R.R. Tolkien", "C.S. Lewis", "J.K. Rowling", "George R.R. Martin"],
+    "answer": "J.R.R. Tolkien",
+    "category": "Literature",
+    "points": 1000
+  },
+  {
+    "question": "What is the smallest country in the world by area?",
+    "options": ["Vatican City", "Monaco", "Nauru", "San Marino"],
+    "answer": "Vatican City",
+    "category": "Geography",
+    "points": 1000
+  },
+  {
+    "question": "Which blood type is known as the universal donor?",
+    "options": ["O negative", "AB positive", "A positive", "B negative"],
+    "answer": "O negative",
+    "category": "Science",
+    "points": 1000
+  },
+  {
+    "question": "What year did the Titanic sink?",
+    "options": ["1912", "1905", "1918", "1920"],
+    "answer": "1912",
+    "category": "History",
+    "points": 1000
+  },
+  {
+    "question": "Which planet has the shortest day (rotation period)?",
+    "options": ["Jupiter", "Earth", "Mars", "Venus"],
+    "answer": "Jupiter",
+    "category": "Astronomy",
+    "points": 1000
+  },
+  {
+    "question": "Who painted 'Girl with a Pearl Earring'?",
+    "options": ["Johannes Vermeer", "Rembrandt", "Pieter Bruegel", "Jan van Eyck"],
+    "answer": "Johannes Vermeer",
+    "category": "Art",
+    "points": 1000
+  },
+  {
+    "question": "In which year was the United Nations founded?",
+    "options": ["1945", "1919", "1920", "1960"],
+    "answer": "1945",
+    "category": "History",
+    "points": 1000
+  },
+  {
+    "question": "What is the chemical formula for ozone?",
+    "options": ["O3", "O2", "CO2", "H2O"],
+    "answer": "O3",
+    "category": "Science",
+    "points": 1000
+  },
+  {
+    "question": "Which organ in the human body filters blood?",
+    "options": ["Kidney", "Liver", "Heart", "Lung"],
+    "answer": "Kidney",
+    "category": "Science",
+    "points": 1000
+  },
+  {
+    "question": "What is the world's longest railway?",
+    "options": ["Trans‑Siberian Railway", "Orient Express", "Canadian Pacific", "Great Northern"],
+    "answer": "Trans‑Siberian Railway",
+    "category": "Geography",
+    "points": 1000
+  },
+  {
+    "question": "Who wrote 'Don Quixote'?",
+    "options": ["Miguel de Cervantes", "William Shakespeare", "Dante Alighieri", "Voltaire"],
+    "answer": "Miguel de Cervantes",
+    "category": "Literature",
+    "points": 1000
+  },
+  {
+    "question": "What is the rarest gemstone?",
+    "options": ["Red beryl", "Diamond", "Sapphire", "Emerald"],
+    "answer": "Red beryl",
+    "category": "Science",
+    "points": 1000
+  },
+  {
+    "question": "Which animal is known as the ship of the desert?",
+    "options": ["Camel", "Llama", "Horse", "Donkey"],
+    "answer": "Camel",
+    "category": "Zoology",
+    "points": 1000
+  },  
+  {
+    "question": "Who is the Greek god of war?",
+    "options": ["Ares", "Zeus", "Apollo", "Hermes"],
+    "answer": "Ares",
+    "category": "Mythology",
+    "points": 1000
+  },
+  {
+    "question": "What is the largest organ in the human body?",
+    "options": ["Skin", "Liver", "Heart", "Kidney"],
+    "answer": "Skin",
+    "category": "Science",
+    "points": 1000
+  },
+  {
+    "question": "Which fabric is made from the cocoon of silkworms?",
+    "options": ["Silk", "Cotton", "Wool", "Linen"],
+    "answer": "Silk",
+    "category": "Textiles",
+    "points": 1000
+  },
+  {
+    "question": "At what temperature does water boil in Fahrenheit?",
+    "options": ["212°F", "100°C", "180°F", "32°F"],
+    "answer": "212°F",
+    "category": "Science",
+    "points": 1000
+  },
+  {
+    "question": "Which country gifted the Statue of Liberty to the USA?",
+    "options": ["France", "England", "Spain", "Italy"],
+    "answer": "France",
+    "category": "History",
+    "points": 1000
+  },
+  {
+    "question": "What is the term for a group of lions?",
+    "options": ["Pride", "Pack", "Herd", "Flock"],
+    "answer": "Pride",
+    "category": "Zoology",
+    "points": 1000
+  },
+  {
+    "question": "Which vitamin is essential for blood clotting?",
+    "options": ["Vitamin K", "Vitamin C", "Vitamin D", "Vitamin A"],
+    "answer": "Vitamin K",
+    "category": "Science",
+    "points": 1000
+  },
+  {
+    "question": "Who developed the polio vaccine?",
+    "options": ["Jonas Salk", "Albert Sabin", "Louis Pasteur", "Edward Jenner"],
+    "answer": "Jonas Salk",
+    "category": "Medicine",
+    "points": 1000
+  },
+  {
+    "question": "What is the term for animals that can live both in water and on land?",
+    "options": ["Amphibians", "Reptiles", "Mammals", "Fish"],
+    "answer": "Amphibians",
+    "category": "Zoology",
+    "points": 1000
+  },
+  {"question":"What is the highest mountain in Africa?","options":["Mount Kilimanjaro","Mount Kenya","Mount Elgon","Ruwenzori"],"answer":"Mount Kilimanjaro","category":"Geography","points":1000},
+  {"question":"Which chemical element has the highest electrical conductivity at standard temperature and pressure?","options":["Silver","Copper","Gold","Aluminum"],"answer":"Silver","category":"Science","points":1000},
+  {"question":"Who authored the novel 'Crime and Punishment'?","options":["Fyodor Dostoevsky","Leo Tolstoy","Anton Chekhov","Vladimir Nabokov"],"answer":"Fyodor Dostoevsky","category":"Literature","points":1000},
+  {"question":"In which year did the Battle of Hastings take place?","options":["1066","1215","1415","1060"],"answer":"1066","category":"History","points":1000},
+  {"question":"Which philosopher wrote 'Critique of Pure Reason'?","options":["Immanuel Kant","Jean-Jacques Rousseau","David Hume","John Locke"],"answer":"Immanuel Kant","category":"Philosophy","points":1000},
+  {"question":"What is the largest internal organ in the human body?","options":["Liver","Skin","Lung","Brain"],"answer":"Liver","category":"Science","points":1000},
+  {"question":"Which planet rotates on its side with an axial tilt of about 98 degrees?","options":["Uranus","Neptune","Saturn","Mercury"],"answer":"Uranus","category":"Astronomy","points":1000},
+  {"question":"Who composed the opera 'Carmen'?","options":["Georges Bizet","Giuseppe Verdi","Richard Wagner","Giacomo Puccini"],"answer":"Georges Bizet","category":"Music","points":1000},
+  {"question":"What is the smallest bone in the human body?","options":["Stapes","Incus","Malleus","Femur"],"answer":"Stapes","category":"Science","points":1000},
+  {"question":"Which U.S. president issued the Emancipation Proclamation?","options":["Abraham Lincoln","Ulysses S. Grant","Andrew Johnson","Thomas Jefferson"],"answer":"Abraham Lincoln","category":"History","points":1000},
+  {"question":"What is the name of the longest river in Asia?","options":["Yangtze","Yellow River","Mekong","Ganges"],"answer":"Yangtze","category":"Geography","points":1000},
+  {"question":"Which element is named after the creator of the Periodic Table, Dmitri Mendeleev?","options":["Mendelevium","Einsteinium","Fermium","Rutherfordium"],"answer":"Mendelevium","category":"Science","points":1000},
+  {"question":"Which year did the first manned Moon landing occur?","options":["1969","1965","1972","1967"],"answer":"1969","category":"History","points":1000},
+  {"question":"Who painted 'The Night Watch'?","options":["Rembrandt","Caravaggio","Peter Paul Rubens","Francisco Goya"],"answer":"Rembrandt","category":"Art","points":1000},
+  {"question":"What is the capital of Mongolia?","options":["Ulaanbaatar","Astana","Tashkent","Bishkek"],"answer":"Ulaanbaatar","category":"Geography","points":1000},
+  {"question":"Which novel features the character Ebenezer Scrooge?","options":["A Christmas Carol","Oliver Twist","Great Expectations","David Copperfield"],"answer":"A Christmas Carol","category":"Literature","points":1000},
+  {"question":"In computing, what does GPU stand for?","options":["Graphics Processing Unit","General Processing Unit","Graphical Performance Unit","General Performance Unit"],"answer":"Graphics Processing Unit","category":"Technology","points":1000},
+  {"question":"Which gas is most abundant in the Earth's crust by weight?","options":["Oxygen","Silicon","Aluminum","Iron"],"answer":"Oxygen","category":"Science","points":1000},
+  {"question":"Who was the first woman to fly solo across the Atlantic Ocean?","options":["Amelia Earhart","Harriet Quimby","Bessie Coleman","Jacqueline Cochran"],"answer":"Amelia Earhart","category":"History","points":1000},
+  {"question":"What musical instrument has keys, pedals and strings?","options":["Piano","Harp","Organ","Violin"],"answer":"Piano","category":"Music","points":1000},
+  {"question":"Which mountain is known as 'Savage Mountain'?","options":["K2","Everest","Kangchenjunga","Lhotse"],"answer":"K2","category":"Geography","points":1000},
+  {"question":"What is the only U.S. state to begin with the letter 'P'?","options":["Pennsylvania","Oregon","Texas","Montana"],"answer":"Pennsylvania","category":"Geography","points":1000},
+  {"question":"Which country has the largest land border with Germany?","options":["Czech Republic","Austria","Poland","France"],"answer":"Czech Republic","category":"Geography","points":1000},
+  {"question":"What is the most abundant element in the universe by mass?","options":["Hydrogen","Helium","Oxygen","Carbon"],"answer":"Hydrogen","category":"Science","points":1000},
+  {"question":"Who wrote the play 'The Importance of Being Earnest'?","options":["Oscar Wilde","George Bernard Shaw","Samuel Beckett","Harold Pinter"],"answer":"Oscar Wilde","category":"Literature","points":1000},
+  {"question":"Which fluid transports oxygen in the human body?","options":["Blood","Lymph","Plasma","Saliva"],"answer":"Blood","category":"Science","points":1000},
+  {"question":"In which city is the headquarters of the United Nations?","options":["New York","Geneva","Vienna","The Hague"],"answer":"New York","category":"Geography","points":1000},
+  {"question":"What is the largest species of penguin?","options":["Emperor Penguin","King Penguin","Adelie Penguin","Chinstrap Penguin"],"answer":"Emperor Penguin","category":"Science","points":1000},
+  {"question":"Which African country was formerly known as Abyssinia?","options":["Ethiopia","Sudan","Egypt","Kenya"],"answer":"Ethiopia","category":"History","points":1000},
+  {"question":"Which metal has the highest density?","options":["Osmium","Iridium","Gold","Lead"],"answer":"Osmium","category":"Science","points":1000},
+  {"question":"Which continent is the island of Madagascar part of?","options":["Africa","Asia","South America","Oceania"],"answer":"Africa","category":"Geography","points":1000},
+  {"question":"Who was the British Prime Minister during World War II?","options":["Winston Churchill","Neville Chamberlain","Clement Attlee","Anthony Eden"],"answer":"Winston Churchill","category":"History","points":1000},
+  {"question":"What is the chemical name for table sugar?","options":["Sucrose","Glucose","Fructose","Maltose"],"answer":"Sucrose","category":"Science","points":1000},
+  {"question":"Which animal is known to kill more humans than any other?","options":["Mosquito","Crocodile","Snake","Shark"],"answer":"Mosquito","category":"Science","points":1000},
+  {"question":"In which organelle does photosynthesis occur?","options":["Chloroplast","Mitochondrion","Ribosome","Golgi apparatus"],"answer":"Chloroplast","category":"Science","points":1000},
+  {"question":"Which country hosted the 2016 Summer Olympics?","options":["Brazil","China","UK","Russia"],"answer":"Brazil","category":"Sports","points":1000},
+  {"question":"What is the term for a word that is the same spelled forwards and backwards?","options":["Palindrome","Anagram","Oxymoron","Synonym"],"answer":"Palindrome","category":"Language","points":1000},
+  {"question":"Who wrote the detective novel 'Murder on the Orient Express'?","options":["Agatha Christie","Arthur Conan Doyle","Dashiell Hammett","Raymond Chandler"],"answer":"Agatha Christie","category":"Literature","points":1000},
+  {"question":"Which vitamin is also called ascorbic acid?","options":["Vitamin C","Vitamin B12","Vitamin D","Vitamin A"],"answer":"Vitamin C","category":"Science","points":1000},
+  {"question":"What is the most abundant metal in the Earth's crust?","options":["Aluminum","Iron","Magnesium","Silicon"],"answer":"Aluminum","category":"Science","points":1000},
+  {"question":"Which sea is the saltiest major sea?","options":["Dead Sea","Mediterranean Sea","Red Sea","Black Sea"],"answer":"Dead Sea","category":"Geography","points":1000},
+  {"question":"Who is the author of 'One Hundred Years of Solitude'?","options":["Gabriel García Márquez","Isabel Allende","Mario Vladimir Vajaila Mario Vargas Llosa","Pablo Neruda"],"answer":"Gabriel García Márquez","category":"Literature","points":1000},
+  {"question":"What is the main ingredient in traditional Japanese miso soup?","options":["Soybeans","Rice","Fish broth","Seaweed"],"answer":"Soybeans","category":"Food & Drink","points":1000},
+  {"question":"Which Italian city is famous for its canals?","options":["Venice","Florence","Rome","Milan"],"answer":"Venice","category":"Geography","points":1000},
+  {"question":"What does SQL stand for?","options":["Structured Query Language","Simple Query Language","Sequential Query Language","System Query Language"],"answer":"Structured Query Language","category":"Technology","points":1000},
+  {"question":"Which is the longest bone in the human body?","options":["Femur","Tibia","Humerus","Fibula"],"answer":"Femur","category":"Science","points":1000},
+  {"question":"What phenomenon causes the sky to appear blue?","options":["Rayleigh scattering","Reflection","Diffraction","Refraction"],"answer":"Rayleigh scattering","category":"Science","points":1000},
+  {"question":"Which desert is known as the 'Sea of Sand'?","options":["Sahara","Gobi","Mojave","Kalahari"],"answer":"Sahara","category":"Geography","points":1000},
+  {"question":"Who discovered radioactivity?","options":["Henri Becquerel","Marie Curie","Ernest Rutherford","Pierre Curie"],"answer":"Henri Becquerel","category":"Science","points":1000},
+  {"question":"Which U.S. state is known as the 'Sunshine State'?","options":["Florida","California","Arizona","Texas"],"answer":"Florida","category":"Geography","points":1000}
+]
