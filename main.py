@@ -37,14 +37,14 @@ intents.message_content = True
 intents.guilds = True
 intents.members = True
 intents.presences = True
-bot = commands.Bot(command_prefix=";", intents=intents, case_insensitive=True)
+bot = commands.Bot(command_prefix="-", intents=intents, case_insensitive=True)
 bot.remove_command('help')
 
 LOTTERY_TICKET_PRICE = 50000
 LOTTERY_MAX_TICKETS = 5
 LOTTERY_BASE_PRIZE = 50000
 LOTTERY_BONUS_PER_TICKET = 25000
-LOTTERY_CHANNEL_ID = 977201441146040362
+LOTTERY_CHANNEL_ID = 1398586067967414323
 
 
 # ----------- MONGODB SETUP -----------
@@ -54,8 +54,8 @@ MONGO_URI = os.getenv("MONGO_URL")
 client = AsyncIOMotorClient(MONGO_URI)
 
 db = client["raiko"] 
-users = db["users"]
-bot_settings = db["bot_settings"]
+users = db["users_test"]
+bot_settings = db["bot_settingstest"]
 
 # Block disabled commands
 @bot.check
@@ -1336,7 +1336,7 @@ async def run_lottery_draw():
     for u in buyers:
         entries.extend([u["_id"]] * u.get("lottery_tickets", 0))
 
-    channel = bot.get_channel(977201441146040362)
+    channel = bot.get_channel(1398586067967414323)
     if entries:
         winner_id = random.choice(entries)
         winner = await bot.fetch_user(int(winner_id))
@@ -3096,8 +3096,8 @@ async def stopuno(ctx):
 
 @bot.command()
 async def trivia(ctx):
-    if ctx.channel.id != 1399446341012422797:
-        return await ctx.send("❌ Trivia can only be played in <#1399446341012422797>.")
+    if ctx.channel.id != 1399899594757767340:
+        return await ctx.send("❌ Trivia can only be played in <#1399899594757767340>.")
 
     global unused_trivia_questions
     messages_to_delete = []
