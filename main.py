@@ -834,6 +834,7 @@ class UnoGame:
         try:
             print(f"[DEBUG] Initializing UNO game | Bet: {bet} | Players: {[p.display_name for p in players]}")
             self.discard_pile = []
+            self.top_card = None
             self.timer_task = None 
             self.ctx = ctx
             self.bet = bet
@@ -844,11 +845,13 @@ class UnoGame:
             self.hands = {p: [self.deck.pop() for _ in range(7)] for p in players}
             print(f"[DEBUG] Hands dealt: {[len(self.hands[p]) for p in players]}")
             self.pile = [self.deck.pop()]
+            self.top_card = self.pile[-1]  # ✅ Set the initial top card
             print(f"[DEBUG] First top card: {self.pile[-1]}")
             while self.pile[-1] in WILD_CARDS or any(x in self.pile[-1] for x in ['⏭️', '+2']):
                 print(f"[DEBUG] Top card {self.pile[-1]} not allowed. Replacing...")
                 self.deck.insert(0, self.pile.pop())
                 self.pile.append(self.deck.pop())
+                self.top_card = self.pile[-1]  # ✅ Update top_card again in case it changed
             print(f"[DEBUG] Valid starting top card: {self.pile[-1]}")
             self.current = 0
             self.direction = 1
@@ -1095,10 +1098,11 @@ class DrawButton(discord.ui.Button):
             await interaction.response.send_message(f"🃏 You drew: `{drawn_card}`", ephemeral=True)
 
             # If it's playable, allow them to still play it manually
-            if is_valid_play(drawn_card, self.game.pile[-1], self.game.draw_stack, self.game.color_override):
+            if is_valid_play(drawn_card, self.game.top_card, self.game.draw_stack, self.game.color_override):
                 await self.game.ctx.send(f"🔄 {self.user.display_name} drew a playable card.")
             else:
                 self.game.advance_turn()
+                self.game.top_card = self.game.pile[-1]  # ✅ Ensure top_card stays accurate
                 await start_uno_game(interaction.client, self.game)
 
         except Exception:
@@ -1152,6 +1156,7 @@ class HandDropdown(Select):
                 return await interaction.response.send_message("⚠️ Could not find the card in hand.", ephemeral=True)
 
             g.pile.append(selected_raw)
+            g.top_card = selected_raw  # ✅ Update top card
             g.apply_card_effect(selected_raw)
 
             if selected_raw in WILD_CARDS:
