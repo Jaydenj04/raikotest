@@ -758,14 +758,16 @@ def is_valid_play(card, top_card, draw_stack, color_override=None):
     try:
         top = color_override or top_card
 
+        # Draw stack is active
         if draw_stack:
-            # Only allow stacking if the card matches the current draw type
+            # Only allow stacking if the same type of draw card
             if '+2' in card and '+2' in top:
                 return True
             if '+4' in card and '+4' in top:
                 return True
-            return False  # No other cards allowed during draw stack
+            return False  # Can't play any other cards during draw stack
 
+        # Always allow wilds
         if card in WILD_CARDS:
             return True
 
@@ -785,6 +787,7 @@ def is_valid_play(card, top_card, draw_stack, color_override=None):
         print(f"[ERROR] is_valid_play() failed with card={card}, top_card={top_card}, draw_stack={draw_stack}")
         traceback.print_exc()
         return False
+
 
 class ColorSelectView(discord.ui.View):
     def __init__(self, game, user):
@@ -1215,12 +1218,29 @@ async def start_uno_game(bot, game):
             
         async def turn_timer(p):
             try:
+                # If player is under draw stack pressure
+                if game.draw_stack > 0:
+                    playable = [c for c in game.hands[p] if is_valid_play(c, game.top_card, game.draw_stack)]
+                    if not playable:
+                        # No stackable +2/+4, draw immediately and skip
+                        drawn = [game.deck.pop() for _ in range(game.draw_stack)]
+                        game.hands[p].extend(drawn)
+                        await game.ctx.send(
+                            f"❗ {p.mention} has no +2/+4 to stack and draws **{game.draw_stack} cards**. Turn skipped."
+                        )
+                        game.draw_stack = 0
+                        game.advance_turn()
+                        await start_uno_game(bot, game)
+                        return  # Exit early
+                    # Else wait 30s and let them stack manually
+
+                # Countdown reminders
                 for seconds_left in [20, 10, 5]:
                     await asyncio.sleep(30 - seconds_left)
                     await game.ctx.send(f"⏳ {p.mention}, {seconds_left}s left to play...")
 
+                # Final check after timeout
                 if p == game.current_player():
-                    # Check if player is under draw pressure
                     if game.draw_stack > 0:
                         drawn = [game.deck.pop() for _ in range(game.draw_stack)]
                         game.hands[p].extend(drawn)
@@ -1233,10 +1253,10 @@ async def start_uno_game(bot, game):
 
                     game.advance_turn()
                     await start_uno_game(bot, game)
-
-            except Exception:
-                print("[UNO ERROR] Turn timer failed.")
+            except Exception as e:
+                print(f"[ERROR] in turn_timer for {p.display_name}")
                 traceback.print_exc()
+
 
         game.timer_task = asyncio.create_task(turn_timer(player))
 
