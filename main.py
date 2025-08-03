@@ -3667,6 +3667,58 @@ async def test(ctx):
     await ctx.send("✅ test works")
     print("✅ test fired")
 
+# =============================
+# ======== LOOT CHEST =========
+# =============================
+
+active_chests = {}  # Global chest tracker
+
+CHEST_TYPES = [
+    {
+        "key": "silver",
+        "name": "Silver Chest",
+        "color": 0xC0C0C0,
+        "min": 500,
+        "max": 1500,
+        "weight": 40,
+        "cursed": False,
+        "image": "https://i.imgur.com/BhImP0E.png"
+    },
+    {
+        "key": "gold",
+        "name": "Gold Chest",
+        "color": 0xFFD700,
+        "min": 1500,
+        "max": 3000,
+        "weight": 30,
+        "cursed": False,
+        "image": "https://i.imgur.com/jAZ5ozj.png"
+    },
+    {
+        "key": "diamond",
+        "name": "Diamond Chest",
+        "color": 0x00E5FF,
+        "min": 3000,
+        "max": 6000,
+        "weight": 20,
+        "cursed": False,
+        "image": "https://i.imgur.com/y1oyrj6.png"
+    },
+    {
+        "key": "cursed",
+        "name": "Cursed Chest",
+        "color": 0x8B0000,
+        "min": -3000,
+        "max": -500,
+        "weight": 10,
+        "cursed": True,
+        "image": "https://i.imgur.com/KvPuv2m.png"
+    },
+]
+
+def choose_chest():
+    weights = [c["weight"] for c in CHEST_TYPES]
+    return random.choices(CHEST_TYPES, weights=weights, k=1)[0]
 
 
 # ============================
@@ -3680,6 +3732,9 @@ async def on_message(message):
 
     content = message.content.lower().strip("!?. ")
 
+    # ========================
+    # UNO "call uno" detection
+    # ========================
     if content == "uno":
         for game in active_uno_games:
             if game.message and game.message.channel.id == message.channel.id:
@@ -3696,8 +3751,73 @@ async def on_message(message):
                         await start_uno_game(bot, game)
                     return
 
-    await bot.process_commands(message)
+    # ========================
+    # Loot Chest System
+    # ========================
+    global active_chests
+    channel = message.channel
 
+    if content == "!claim":
+        if channel.id in active_chests:
+            chest = active_chests[channel.id]
+            if chest["claimed"]:
+                if chest["cursed"]:
+                    await channel.send("damn, god was on your side for this one")
+                else:
+                    await channel.send("you were slow af on that one haha loser")
+            else:
+                chest["claimed"] = True
+                claimer = message.author
+                amount = random.randint(abs(chest["min"]), abs(chest["max"]))
+                amount = -amount if chest["cursed"] else amount
+
+                await users.update_one(
+                    {"_id": str(claimer.id)},
+                    {"$inc": {"wallet": amount}},
+                    upsert=True
+                )
+
+                if chest["cursed"]:
+                    await channel.send(
+                        f"{claimer.mention} you just got fucked haha that was a cursed chest you idiot, "
+                        f"you lost **{abs(amount):,} 🥖**"
+                    )
+                else:
+                    await channel.send(
+                        f"{claimer.mention} was the fastest and won **{amount:,} 🥖**!"
+                    )
+
+                del active_chests[channel.id]
+
+        await bot.process_commands(message)
+        return
+
+    # 1% spawn chance
+    if channel.id not in active_chests and random.randint(1, 100) == 1:
+        chest = choose_chest()
+
+        embed = discord.Embed(
+            title=f"A {chest['name']} appeared!",
+            description="A chest just spawned! Type `!claim` first to claim it!",
+            color=chest["color"]
+        )
+        embed.set_image(url=chest["image"])
+        await channel.send(embed=embed)
+
+        active_chests[channel.id] = {
+            **chest,
+            "claimed": False
+        }
+
+        async def timeout_cleanup():
+            await asyncio.sleep(30)
+            if channel.id in active_chests and not active_chests[channel.id]["claimed"]:
+                await channel.send("⏳ The chest vanished. Nobody claimed it in time.")
+                del active_chests[channel.id]
+
+        asyncio.create_task(timeout_cleanup())
+
+    await bot.process_commands(message)
 
 
 @tasks.loop(minutes=1)
