@@ -3794,12 +3794,16 @@ async def on_message(message):
         if channel.id in active_chests:
             chest = active_chests[channel.id]
             if chest["claimed"]:
+                if message.author.id == chest.get("claimed_by"):
+                    return  # don't roast the winner again
                 if chest["cursed"]:
                     await channel.send("damn, god was on your side for this one")
                 else:
                     await channel.send("you were slow af on that one haha loser")
             else:
                 chest["claimed"] = True
+                chest["claimed_by"] = message.author.id  # track who claimed it
+
                 claimer = message.author
                 amount = random.randint(abs(chest["min"]), abs(chest["max"]))
                 amount = -amount if chest["cursed"] else amount
@@ -3820,10 +3824,16 @@ async def on_message(message):
                         f"{claimer.mention} was the fastest and won **{amount:,} 🥖**!"
                     )
 
-                del active_chests[channel.id]
+                async def delayed_delete():
+                    await asyncio.sleep(10)
+                    if channel.id in active_chests:
+                        del active_chests[channel.id]
+
+                asyncio.create_task(delayed_delete())
 
         await bot.process_commands(message)
         return
+
 
     # 1% spawn chance
     if channel.id not in active_chests and random.randint(1, 100) == 1:
