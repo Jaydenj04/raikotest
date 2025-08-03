@@ -3797,16 +3797,19 @@ async def on_message(message):
                 if message.author.id == chest.get("claimed_by"):
                     return  # don't roast the winner again
                 if chest["cursed"]:
-                    await channel.send("damn, god was on your side for this one")
+                    await channel.send(f"{message.author.mention} thank god you slow af, pay attention to what type of lootboxes are being spawned dickhead")
                 else:
-                    await channel.send("you were slow af on that one haha loser")
+                    await channel.send(f"{message.author.mention} you were slow af on that one haha loser")
             else:
                 chest["claimed"] = True
                 chest["claimed_by"] = message.author.id  # track who claimed it
 
                 claimer = message.author
-                amount = random.randint(abs(chest["min"]), abs(chest["max"]))
-                amount = -amount if chest["cursed"] else amount
+                if chest["cursed"]:
+                    amount = -random.randint(abs(chest["max"]), abs(chest["min"]))
+                else:
+                    amount = random.randint(chest["min"], chest["max"])
+
 
                 await users.update_one(
                     {"_id": str(claimer.id)},
