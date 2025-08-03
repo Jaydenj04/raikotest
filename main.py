@@ -3721,6 +3721,38 @@ def choose_chest():
     return random.choices(CHEST_TYPES, weights=weights, k=1)[0]
 
 
+@bot.command(name="forcechest")
+@commands.has_permissions(administrator=True)
+async def forcechest(ctx):
+    global active_chests
+
+    if ctx.channel.id in active_chests:
+        return await ctx.send("⚠️ A chest is already active in this channel.")
+
+    chest = choose_chest()
+
+    embed = discord.Embed(
+        title=f"A {chest['name']} appeared!",
+        description="A chest just spawned! Type `!pick` first to claim it!",
+        color=chest["color"]
+    )
+    embed.set_image(url=chest["image"])
+    await ctx.send(embed=embed)
+
+    active_chests[ctx.channel.id] = {
+        **chest,
+        "claimed": False
+    }
+
+    async def timeout_cleanup():
+        await asyncio.sleep(30)
+        if ctx.channel.id in active_chests and not active_chests[ctx.channel.id]["claimed"]:
+            await ctx.send("⏳ The chest vanished. Nobody claimed it in time.")
+            del active_chests[ctx.channel.id]
+
+    asyncio.create_task(timeout_cleanup())
+
+
 # ============================
 # Start the bot (on_ready event)
 # ============================
@@ -3732,7 +3764,6 @@ async def on_message(message):
 
     raw = message.content.strip()
     content = raw.lower().strip("!?. ")
-    content = message.content.lower().strip("!?. ")
 
     # ========================
     # UNO "call uno" detection
