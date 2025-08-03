@@ -3730,6 +3730,8 @@ async def on_message(message):
     if not message.guild or message.author.bot:
         return
 
+    raw = message.content.strip()
+    content = raw.lower().strip("!?. ")
     content = message.content.lower().strip("!?. ")
 
     # ========================
