@@ -3763,7 +3763,7 @@ async def on_message(message):
         return
 
     raw = message.content.strip()
-    content = raw.lower().strip("!?. ")
+    content = raw.lower()
 
     # ========================
     # UNO "call uno" detection
