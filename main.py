@@ -3682,7 +3682,7 @@ CHEST_TYPES = [
         "max": 1500,
         "weight": 40,
         "cursed": False,
-        "image": "https://i.imgur.com/BhImP0E.png"
+        "image": "https://cdn.discordapp.com/attachments/962847107318951976/1401441966813614141/dgifuzi-4e29b16f-aa74-4f1a-b597-f935e67e61a1.png?ex=68904a0a&is=688ef88a&hm=9da9b4a42e8d6884a8bed676aac30fb5a265ca35b1920938ad734e9d1c352ac3&"
     },
     {
         "key": "gold",
@@ -3692,7 +3692,7 @@ CHEST_TYPES = [
         "max": 3000,
         "weight": 30,
         "cursed": False,
-        "image": "https://i.imgur.com/jAZ5ozj.png"
+        "image": "https://cdn.discordapp.com/attachments/962847107318951976/1401441996035588216/1000146375-removebg-preview.png?ex=68904a11&is=688ef891&hm=f0be893b204af79c3a7f90f7975115c5fab1c49ca3544bafa6cdb92e74eba620&"
     },
     {
         "key": "diamond",
@@ -3702,7 +3702,7 @@ CHEST_TYPES = [
         "max": 6000,
         "weight": 20,
         "cursed": False,
-        "image": "https://i.imgur.com/y1oyrj6.png"
+        "image": "https://cdn.discordapp.com/attachments/962847107318951976/1401442029652803696/1000146365-removebg-preview.png?ex=68904a19&is=688ef899&hm=26829d4a91f71bb4e180d14f411eedfe32c4b1efc6dc13993a1459b9c87539a0&"
     },
     {
         "key": "cursed",
@@ -3712,7 +3712,7 @@ CHEST_TYPES = [
         "max": -500,
         "weight": 10,
         "cursed": True,
-        "image": "https://i.imgur.com/KvPuv2m.png"
+        "image": "https://cdn.discordapp.com/attachments/962847107318951976/1401442089543270492/1000146368-removebg-preview.png?ex=68904a27&is=688ef8a7&hm=7b4d14b48237e60d3f027cd37e3b171b806300124e4e18c1bfa5baede9673f62&"
     },
 ]
 
@@ -3757,7 +3757,7 @@ async def on_message(message):
     global active_chests
     channel = message.channel
 
-    if content == "!claim":
+    if content == "!pick":
         if channel.id in active_chests:
             chest = active_chests[channel.id]
             if chest["claimed"]:
@@ -3797,8 +3797,8 @@ async def on_message(message):
         chest = choose_chest()
 
         embed = discord.Embed(
-            title=f"A {chest['name']} appeared!",
-            description="A chest just spawned! Type `!claim` first to claim it!",
+            title=f"A loot chest appeared!",
+            description=f"A {chest['name']} just spawned! Type `!pick` quickly to pick it up!",
             color=chest["color"]
         )
         embed.set_image(url=chest["image"])
