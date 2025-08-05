@@ -3457,7 +3457,6 @@ async def beg(ctx, target: discord.Member):
 # ============================
 
 @bot.command(aliases=["bal", "cash", "bread"])
-@bot.command()
 async def balance(ctx, member: discord.Member = None):
     user = member or ctx.author
     user_data = await get_user(user.id)
