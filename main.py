@@ -3457,11 +3457,13 @@ async def beg(ctx, target: discord.Member):
 # ============================
 
 @bot.command(aliases=["bal", "cash", "bread"])
+@bot.command()
 async def balance(ctx, member: discord.Member = None):
     user = member or ctx.author
     user_data = await get_user(user.id)
-    wallet = user_data["wallet"]
-    bank = user_data["bank"]
+
+    wallet = user_data.get("wallet", 0)
+    bank = user_data.get("bank", 0)
     total = wallet + bank
 
     embed = discord.Embed(
