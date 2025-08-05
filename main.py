@@ -73,6 +73,25 @@ async def test_mongodb():
         print(f"❌ MongoDB connection failed: {e}")
 
 
+@bot.command()
+async def clearbanks(ctx):
+    if ctx.author.id not in CREATOR_IDS:
+        return await ctx.send("🚫 Only bot creators can use this command.")
+
+    result = await users.update_many(
+        {"bank": {"$gt": 0}},  # Only users with something in bank
+        [
+            {
+                "$set": {
+                    "wallet": {"$add": ["$wallet", "$bank"]},
+                    "bank": 0
+                }
+            }
+        ]
+    )
+
+    await ctx.send(f"✅ Cleared bank balances for **{result.modified_count}** users.")
+
 
 # ----------- USER UTILS -----------
 
