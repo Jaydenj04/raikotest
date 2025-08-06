@@ -1955,14 +1955,11 @@ async def withdraw(ctx, amount: int):
     await ctx.send(f"💸 {ctx.author.mention} withdrew {amount} 🥖 from the bank.")
 
 
-# ============================
-# COMMAND: DEPOSIT
-# ============================
-
 @bot.command(aliases=["dep"])
 async def deposit(ctx, amount: int):
     user_data = await get_user(ctx.author.id)
-    wallet = user_data["wallet"]
+    wallet = user_data.get("wallet", 0)
+    bank = user_data.get("bank", 0)
     max_deposit = wallet // 2
 
     if amount <= 0:
@@ -1973,7 +1970,11 @@ async def deposit(ctx, amount: int):
         return await ctx.send(f"❌ You can only deposit up to 50% of your wallet ({max_deposit} 🥖).")
 
     new_wallet = wallet - amount
-    new_bank = user_data["bank"] + amount
+    new_bank = bank + amount
+
+    # 🛑 Block if bank would be more than 50% of remaining wallet after deposit
+    if new_wallet == 0 or new_bank > new_wallet / 2:
+        return await ctx.send("⚠️ You can't deposit that much — your bank would exceed 50% of your remaining wallet.")
 
     await users.update_one(
         {"_id": str(ctx.author.id)},
