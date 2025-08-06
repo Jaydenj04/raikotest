@@ -2000,12 +2000,12 @@ async def depositmax(ctx):
     if max_deposit == 0:
         return await ctx.send("❌ You need at least 2 🥖 in your wallet to use `;deposit max`.")
 
-    # Enforce the bank must not exceed 50% of wallet after deposit
-    if bank + max_deposit > (wallet - max_deposit) // 2:
-        return await ctx.send("⚠️ This deposit would cause your bank to exceed 50% of your remaining wallet.")
-
     new_wallet = wallet - max_deposit
     new_bank = bank + max_deposit
+
+    # ✅ Correct 50% check AFTER deposit
+    if new_bank > new_wallet * 0.5:
+        return await ctx.send("⚠️ This deposit would cause your bank to exceed 50% of your remaining wallet.")
 
     await users.update_one(
         {"_id": str(ctx.author.id)},
