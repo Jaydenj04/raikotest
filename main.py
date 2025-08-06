@@ -1944,8 +1944,9 @@ async def withdraw(ctx, amount: int):
     if amount > bank:
         return await ctx.send(f"❌ You don't have that much 🥖 in the bank. Current balance: {bank} 🥖.")
 
-    new_wallet = user_data["wallet"] + amount
-    new_bank = user_data["bank"] - amount
+    bank = user_data.get("bank", 0)
+    new_bank = bank + max_deposit
+
 
     await users.update_one(
         {"_id": str(ctx.author.id)},
@@ -1988,7 +1989,8 @@ async def deposit(ctx, amount: int):
 @bot.command(aliases=["depmax", "depall", "depositall"])
 async def depositmax(ctx):
     user_data = await get_user(ctx.author.id)
-    wallet = user_data["wallet"]
+    wallet = user_data.get("wallet", 0)
+    bank = user_data.get("bank", 0)
 
     if wallet <= 0:
         return await ctx.send("❌ You don't have any 🥖 to deposit.")
@@ -1997,15 +1999,19 @@ async def depositmax(ctx):
     if max_deposit == 0:
         return await ctx.send("❌ You need at least 2 🥖 in your wallet to use `;deposit max`.")
 
+    # Enforce the bank must not exceed 50% of wallet after deposit
+    if bank + max_deposit > (wallet - max_deposit) // 2:
+        return await ctx.send("⚠️ This deposit would cause your bank to exceed 50% of your remaining wallet.")
+
     new_wallet = wallet - max_deposit
-    new_bank = user_data["bank"] + max_deposit
+    new_bank = bank + max_deposit
 
     await users.update_one(
         {"_id": str(ctx.author.id)},
         {"$set": {"wallet": new_wallet, "bank": new_bank}}
     )
-    await ctx.send(f"🏦 {ctx.author.mention} deposited {max_deposit} 🥖 (50% of your wallet) into the bank.")
 
+    await ctx.send(f"🏦 {ctx.author.mention} deposited {max_deposit} 🥖 (50% of your wallet) into the bank.")
 
 
 # ============================
