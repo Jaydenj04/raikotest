@@ -2639,32 +2639,54 @@ async def resetcd(ctx):
     if ctx.author.id not in CREATOR_IDS:
         return await ctx.send("🚫 Only the bot owner(s) can use this command.")
 
+    from discord.ui import View, Button  # ensure imports exist
+    from datetime import datetime
+
     class ConfirmResetCD(View):
+        def __init__(self):
+            super().__init__(timeout=60)
+
         @discord.ui.button(label="✅ Reset All Cooldowns", style=discord.ButtonStyle.danger)
         async def confirm(self, interaction: discord.Interaction, button: Button):
-            if interaction.user != ctx.author:
+            if interaction.user.id != ctx.author.id:
                 return await interaction.response.send_message("Only the command issuer can confirm.", ephemeral=True)
 
-            await interaction.response.defer()  # Prevent "interaction failed"
+            await interaction.response.defer()  # avoids "interaction failed"
 
-            result = await users.update_many({}, {
-                "$unset": {
-                    "cooldowns": ""
-                }
-            })
+            today = datetime.utcnow().strftime("%Y-%m-%d")
+            # These cover both possible storages: inside cooldowns.wordle.* and at root wordle.*
+            wordle_unset = {
+                f"cooldowns.wordle.{today}:normal": "",
+                f"cooldowns.wordle.{today}:expert": "",
+                f"wordle.{today}:normal": "",
+                f"wordle.{today}:expert": "",
+            }
+
+            # 1) Clear ALL cooldowns by replacing the object (no path conflict)
+            res1 = await users.update_many({}, {"$set": {"cooldowns": {}}})
+
+            # 2) Also remove today's Wordle flags wherever they might exist
+            res2 = await users.update_many({}, {"$unset": wordle_unset})
 
             await interaction.edit_original_response(
-                content=f"♻️ Reset **all cooldowns** for {result.modified_count} users.",
+                content=(
+                    "♻️ Reset **all cooldowns** and cleared today's Wordle state.\n"
+                    f"• Cooldowns reset in **{res1.modified_count}** users\n"
+                    f"• Wordle keys cleared in **{res2.modified_count}** users"
+                ),
                 view=None
             )
 
         @discord.ui.button(label="❌ Cancel", style=discord.ButtonStyle.secondary)
         async def cancel(self, interaction: discord.Interaction, button: Button):
-            if interaction.user != ctx.author:
+            if interaction.user.id != ctx.author.id:
                 return await interaction.response.send_message("Only the command issuer can cancel.", ephemeral=True)
             await interaction.response.edit_message(content="❎ Cooldown reset cancelled.", view=None)
 
-    await ctx.send("⚠️ Are you sure you want to reset **all user cooldowns**?", view=ConfirmResetCD())
+    await ctx.send(
+        "⚠️ Are you sure you want to reset **all user cooldowns** (and clear today's Wordle state)?",
+        view=ConfirmResetCD()
+    )
 
 
 # === Reset Only Weekly Cooldown ===
