@@ -3716,6 +3716,21 @@ async def test(ctx):
     await ctx.send("✅ test works")
     print("✅ test fired")
 
+# ----------- SLASH COMMANDS -----------
+
+@bot.event
+async def on_ready():
+    try:
+        synced = await bot.tree.sync()
+        print(f"✅ Synced {len(synced)} slash command(s).")
+    except Exception as e:
+        print(f"❌ Error syncing slash commands: {e}")
+    print(f"Bot is online as {bot.user}")
+
+@bot.tree.command(name="test", description="Simple test command for the Active Developer Badge")
+async def test(interaction: discord.Interaction):
+    await interaction.response.send_message("Test has been succesful.")
+
 # =============================
 # ======== LOOT CHEST =========
 # =============================
